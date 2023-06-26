@@ -1,1 +1,20 @@
-<h1>Hello World!</h1>
+<html>
+<body>
+
+<h2>What To Watch</h2>
+
+<script>
+var stuff = ['Iron Man', 'Transformers', 'Breaking Bad'];
+function randomitem() {
+	document.getElementById("select").onclick = function() {
+    	document.getElementById("result").innerHTML = stuff[Math.floor(Math.random() * stuff.length)];
+}}
+</script>
+
+<button id="select">Pick text</button>
+  <div class="main">
+    <p id="result"></p>
+  </div>
+
+</body>
+</html>
