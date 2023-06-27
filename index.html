@@ -4,8 +4,7 @@
 <h2>What To Watch</h2>
 
 <script>
-var values = ["Iron Man", "Transformers", "Breaking Bad"],
-  valueToUse = values[Math.floor(Math.random() * values.length)];
+var values = ["Iron Man", "Transformers", "Breaking Bad"];
 document.getElementById("select").onclick = function() {
   document.getElementById("result").innerHTML = values[Math.floor(Math.random() * values.length)];
 }
