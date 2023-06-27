@@ -4,17 +4,17 @@
 <h2>What To Watch</h2>
 
 <script>
-var stuff = ['Iron Man', 'Transformers', 'Breaking Bad'];
-function randomitem() {
-	document.getElementById("select").onclick = function() {
-    	document.getElementById("result").innerHTML = stuff[Math.floor(Math.random() * stuff.length)];
-}}
+var values = ["Iron Man", "Transformers", "Breaking Bad"],
+  valueToUse = values[Math.floor(Math.random() * values.length)];
+document.getElementById("select").onclick = function() {
+  document.getElementById("result").innerHTML = values[Math.floor(Math.random() * values.length)];
+}
 </script>
 
-<button id="select">Pick text</button>
-  <div class="main">
-    <p id="result"></p>
-  </div>
+<button id="select">Suprise Me</button>
+<div class="main">
+  <p id="result"></p>
+</div>
 
 </body>
 </html>
