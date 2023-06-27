@@ -1,19 +1,15 @@
 <html>
-<body>
-
-<h2>What To Watch</h2>
-
-<script>
-var values = ["Iron Man", "Transformers", "Breaking Bad"];
-document.getElementById("select").onclick = function() {
-  document.getElementById("result").innerHTML = values[Math.floor(Math.random() * values.length)];
-}
-</script>
-
-<button id="select">Suprise Me</button>
-<div class="main">
-  <p id="result"></p>
-</div>
-
-</body>
+  <body>
+    <h2>What To Watch</h2>
+    <button id="select">Suprise Me</button>
+    <div class="main">
+      <p id="result"></p>
+    </div>
+    <script>
+      var values = ["Iron Man", "Transformers", "Breaking Bad"];
+      document.getElementById("select").onclick = function() {
+        document.getElementById("result").innerHTML = values[Math.floor(Math.random() * values.length)];
+      }
+    </script>
+  </body>
 </html>
