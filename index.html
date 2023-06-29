@@ -2,8 +2,9 @@
   <body style="background-color: rgb(38, 38, 34);">
     <h1 style="color: f2f2f2;text-align:center;">What To Watch</h1>
     <p style="color: f2f2f2;text-align:center;">A list of movie / show ideas for the constantly indecisive.</p>
-    <p style="color: f2f2f2;text-align:center;">The code for this simple site can be found at <a href="https://github.com/killerkenobi/whattowatch">killerkenobi/whattowatch</a>
+    <p style="color: f2f2f2;text-align:center;">The code for this simple site can be found at <a href="https://github.com/killerkenobi/whattowatch" target="_blank">killerkenobi/whattowatch</a>
     </p>
+    <hr>
     <style>
       .button {
         border: none;
@@ -13,7 +14,12 @@
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
-        margin: 4px 2px;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
         transition-duration: 0.4s;
         cursor: pointer;
       }
@@ -26,15 +32,8 @@
         color: white;
       }
     </style>
-    <button class="button button1" ; id="select">Suprise Me</button>
-    <div class="main">
-      <p id="result"></p>
-    </div>
-    <script>
-      var values = ["Iron Man", "Transformers", "Breaking Bad", "Back to the Future", "Harry Potter", "Star Wars", "The Martian", "Narcos", "The Volcano", "Batman/Joker", "Lord of the Rings", "Land of the Lost", "Transformers", "Westworld", "Aliens", "Despicable me", "Below Deck", "Yellowstone", "Nacho Libre", "White House Plumbers", "Stranger Things", "Pirates of the Caribbean", "13 Lives Documentary", "Grown Ups", "Talladega Nights", "The Right Stuff", "Where the Crawdads Sing", "True Detective", "Last of the Mohicans", "Along Came Poly", "Dodgeball", "Office space", "Cast Away", "Mr. Robot", "News of the World", "Tropic Thunder", "Ghostbusters", "Zombieland"];
-      document.getElementById("select").onclick = function() {
-        document.getElementById("result").innerHTML = values[Math.floor(Math.random() * values.length)];
-      }
-    </script>
+    <button class="button button1"; id="select">Suprise Me</button>
+    <p id="result";></p>
+    <script src="js/content_randomizer.js"></script>
   </body>
 </html>
