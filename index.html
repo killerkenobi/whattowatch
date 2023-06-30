@@ -1,39 +1,58 @@
 <html>
-  <body style="background-color: rgb(38, 38, 34);">
-    <h1 style="color: f2f2f2;text-align:center;">What To Watch</h1>
-    <p style="color: f2f2f2;text-align:center;">A list of movie / show ideas for the constantly indecisive.</p>
-    <p style="color: f2f2f2;text-align:center;">The code for this simple site can be found at <a href="https://github.com/killerkenobi/whattowatch" target="_blank">killerkenobi/whattowatch</a>
-    </p>
-    <hr>
-    <style>
-      .button {
-        border: none;
-        color: white;
-        padding: 16px 32px;
-        text-align: center;
-        text-decoration: none;
+  <link href="https://fonts.cdnfonts.com/css/8bit-wonder" rel="stylesheet">
+  <head>
+    <title>killerkenobi/whattowatch</title>
+    <link rel="icon" href="images/killerkenobi.ico">
+    <script type="text/javascript" src="js/warpspeed.min.js"></script>
+    <style type="text/css">
+      html,body {
+        font-family: '8BIT WONDER', sans-serif;
+        ;
+      }
+      div.separator {
+        height: 10em;
+      }
+      a.button1 {
         display: inline-block;
-        font-size: 16px;
         margin: 0;
         position: absolute;
         top: 50%;
         left: 50%;
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
-        transition-duration: 0.4s;
         cursor: pointer;
+        padding: 0.35em 1.2em;
+        border: 0.1em solid #FFFFFF;
+        margin: 0 0.3em 0.3em 0;
+        border-radius: 0.12em;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: '8BIT WONDER', sans-serif;
+        font-weight: 300;
+        color: #FFFFFF;
+        text-align: center;
+        transition: all 0.2s;
       }
-      .button1 {
-        background-color: #3700B3;
-        color: white;
-      }
-      .button1:hover {
-        background-color: #BB86FC;
-        color: white;
+      a.button1:hover {
+        color: #000000;
+        background-color: #FFFFFF;
       }
     </style>
-    <button class="button button1"; id="select">Suprise Me</button>
-    <p id="result";></p>
-    <script src="js/content_randomizer.js"></script>
+  </head>
+  <body>
+    <div style="position:absolute; z-index:1 top:0; left:0; width:100%; height:100%;">
+      <canvas id="canvas" style="width:100%; height:100%;"></canvas>
+      <script>
+        new WarpSpeed("canvas");
+      </script>
+    </div>
+    <div style="position:absolute; z-index:2 top:0; left:0; width:100%; height:100%;">
+      <div style="font-size:3vw; color:#FFFFFF; font-weight:100; text-align:center; margin-top:5rem;">What To Watch</div>
+      <div style="font-size:1vw; color:#FFFFFF; font-weight:75; text-align:center; margin-top:2rem;">A list of movie / show ideas for the constantly indecisive.</div>
+      <div style="font-size:0.65vw; color:#FFFFFF; font-weight:50; text-align:center; margin-top:1rem;">The code for this simple site can be found at <a href="https://github.com/killerkenobi/whattowatch" style="color:#2E67F8" target="_blank">killerkenobi/whattowatch</a></div>
+      <a class="button1" id="select">Suprise Me</a>
+      <div id="result" style="font-size:1vw; color:#FFFFFF; font-weight:75; text-align:center; margin-top:5rem;"></div>
+      <script src="js/content_randomizer.js"></script>
+    </div>
   </body>
 </html>
