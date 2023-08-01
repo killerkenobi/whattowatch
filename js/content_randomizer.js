@@ -1,5 +1,18 @@
-var values = ["Iron Man", "Transformers", "Breaking Bad", "Back to the Future", "Harry Potter", "Star Wars", "The Martian", "Narcos", "The Volcano", "Batman/Joker", "Lord of the Rings", "Land of the Lost", "Transformers", "Westworld", "Aliens", "Despicable me", "Below Deck", "Yellowstone", "Nacho Libre", "White House Plumbers", "Stranger Things", "Pirates of the Caribbean", "13 Lives Documentary", "Grown Ups", "Talladega Nights", "The Right Stuff", "Where the Crawdads Sing", "True Detective", "Last of the Mohicans", "Along Came Poly", "Dodgeball", "Office space", "Cast Away", "Mr. Robot", "News of the World", "Tropic Thunder", "Ghostbusters", "Zombieland"];
+function readLinesFromFile(fileUrl) {
+    return fetch(fileUrl)
+      .then(response => response.text())
+      .then(text => text.split('\n'))
+      .then(lines => lines.filter(line => line.trim() !== ''));
+  }
 
-document.getElementById("select").onclick = function() {
-    document.getElementById("result").innerHTML = values[Math.floor(Math.random() * values.length)];
-}
+  const fileUrl = 'https://cdn.statically.io/gh/killerkenobi/whattowatch/v1.1.1/content.txt';
+  readLinesFromFile(fileUrl)
+    .then(linesArray => {
+      //uncomment to debug --> console.log(linesArray);
+      document.getElementById("select").onclick = function() {
+        document.getElementById("result").innerHTML = linesArray[Math.floor(Math.random() * linesArray.length)];
+      }
+  })
+    .catch(error => {
+      console.error('Error:', error);
+});
