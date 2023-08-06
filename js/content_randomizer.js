@@ -5,7 +5,7 @@ function readLinesFromFile(fileUrl) {
       .then(lines => lines.filter(line => line.trim() !== ''));
   }
 
-  const fileUrl = 'https://cdn.statically.io/gh/killerkenobi/whattowatch/v1.1.1/content.txt';
+  const fileUrl = 'https://cdn.statically.io/gh/killerkenobi/whattowatch/v1.1.2/content.txt';
   readLinesFromFile(fileUrl)
     .then(linesArray => {
       //uncomment to debug --> console.log(linesArray);
